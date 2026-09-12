@@ -1,0 +1,8 @@
+Django>=4.2,<4.3
+django-widget-tweaks>=1.5,<1.6
+sqlparse>=0.5,<0.6
+xhtml2pdf>=0.2.17,<0.3
+qrcode[pil]>=8.2,<9
+Pillow>=11,<13
+gunicorn>=23,<24
+whitenoise>=6.9,<7

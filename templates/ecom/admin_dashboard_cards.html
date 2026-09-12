@@ -1,0 +1,13 @@
+{% extends 'ecom/admin_base.html' %}
+{% block title %}Admin Dashboard · Curious Cart{% endblock %}
+{% block content %}
+<div class="admin-container">
+  <div class="admin-page-head"><div><div class="eyebrow">STORE MANAGEMENT</div><h1>Admin dashboard</h1><p>Curious Cart administration overview.</p></div></div>
+  <section class="admin-stat-grid">
+    <div class="admin-stat"><span>Customers</span><strong>{{ customercount|default:0 }}</strong><small>Registered accounts</small></div>
+    <div class="admin-stat"><span>Products</span><strong>{{ productcount|default:0 }}</strong><small>Catalogue items</small></div>
+    <div class="admin-stat"><span>Orders</span><strong>{{ ordercount|default:0 }}</strong><small>Total orders</small></div>
+    <div class="admin-stat"><span>Revenue</span><strong>₹{{ revenue|default:0 }}</strong><small>Order value</small></div>
+  </section>
+</div>
+{% endblock %}

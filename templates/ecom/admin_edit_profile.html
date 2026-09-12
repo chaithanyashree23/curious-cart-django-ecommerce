@@ -1,0 +1,17 @@
+{% extends 'ecom/admin_base.html' %}
+{% block title %}Admin Profile · Curious Cart{% endblock %}
+{% block content %}
+<div class="admin-container narrow-admin">
+  <div class="admin-page-head"><div><div class="eyebrow">ADMIN ACCOUNT</div><h1>Edit admin name</h1><p>Update the name displayed in your administration account.</p></div></div>
+  <div class="admin-card admin-form-card">
+    <div class="notice" style="margin-bottom:20px"><strong>Username:</strong> {{ admin_user.username }}</div>
+    <form method="post">{% csrf_token %}
+      <div class="admin-form-grid">
+        <div class="field"><label>First name</label><input class="form-input" type="text" name="first_name" value="{{ admin_user.first_name }}" required></div>
+        <div class="field"><label>Last name</label><input class="form-input" type="text" name="last_name" value="{{ admin_user.last_name }}"></div>
+      </div>
+      <div class="form-actions"><a class="btn btn-light" href="{% url 'admin-dashboard' %}">Cancel</a><button class="btn btn-primary" type="submit">Save admin name</button></div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'ecom/admin_base.html' %}
+{% load widget_tweaks %}
+{% block title %}Add Product · Curious Cart{% endblock %}
+{% block content %}
+<div class="admin-container narrow-admin"><div class="admin-page-head"><div><div class="eyebrow">CATALOGUE</div><h1>Add product</h1><p>Create a new item for the Curious Cart catalogue.</p></div></div>
+<div class="admin-card admin-form-card"><form method="post" enctype="multipart/form-data">{% csrf_token %}<div class="admin-form-grid">
+<div class="field"><label>Product name</label>{% render_field productForm.name class="form-input" placeholder="e.g. Classic Kurta" %}</div><div class="field"><label>Price (₹)</label>{% render_field productForm.price class="form-input" placeholder="0" %}</div>
+<div class="field"><label>Stock</label>{% render_field productForm.stock class="form-input" placeholder="25" %}</div>
+<div class="field full"><label>Description</label>{% render_field productForm.description class="form-input" placeholder="Short product description" %}</div><div class="field full"><label>Product image</label>{% render_field productForm.product_image class="form-file" %}</div>
+</div><div class="form-actions"><a class="btn btn-light" href="{% url 'admin-products' %}">Cancel</a><button class="btn btn-primary" type="submit">Add product</button></div></form></div></div>
+{% endblock %}

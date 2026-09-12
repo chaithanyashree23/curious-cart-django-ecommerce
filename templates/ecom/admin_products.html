@@ -1,0 +1,14 @@
+{% extends 'ecom/admin_base.html' %}
+{% load static %}
+{% block title %}Products · Curious Cart{% endblock %}
+{% block content %}
+<div class="admin-container">
+ <div class="admin-page-head"><div><div class="eyebrow">CATALOGUE</div><h1>Products</h1><p>Manage your product catalogue, pricing and stock.</p></div><a class="btn btn-primary" href="{% url 'admin-add-product' %}">+ Add product</a></div>
+ <div class="admin-card">
+  <div class="admin-card-head"><div><h2>Product list</h2><p>{{ products|length }} products available.</p></div></div>
+  <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Product</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead><tbody>
+  {% for p in products %}<tr><td><div class="product-cell">{% if p.product_image %}<img src="{{ p.product_image.url }}" alt="{{ p.name }}">{% else %}<div class="product-placeholder">CC</div>{% endif %}<div><strong>{{ p.name }}</strong><small>{{ p.description|truncatechars:55 }}</small></div></div></td><td><strong>₹{{ p.price }}</strong></td><td><span class="stock-pill {% if p.stock == 0 %}out{% elif p.stock < 10 %}low{% endif %}">{{ p.stock }}</span></td><td><div class="table-actions"><a class="icon-btn" href="{% url 'update-product' p.id %}">Edit</a><a class="icon-btn danger" href="{% url 'delete-product' p.id %}" onclick="return confirm('Delete this product?');">Delete</a></div></td></tr>{% empty %}<tr><td colspan="4" class="empty-cell">No products found.</td></tr>{% endfor %}
+  </tbody></table></div>
+ </div>
+</div>
+{% endblock %}

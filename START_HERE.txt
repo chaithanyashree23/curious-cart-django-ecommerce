@@ -1,0 +1,73 @@
+CURIOUS CART - PROFESSIONAL READY PROJECT
+==========================================
+
+1. Open PowerShell in this folder (the folder containing manage.py).
+2. Create and activate a virtual environment:
+
+   python -m venv venv
+   venv\Scripts\activate
+
+3. Install packages:
+
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+
+4. Prepare the database:
+
+   python manage.py makemigrations
+   python manage.py migrate
+
+5. Start the website:
+
+   python manage.py runserver
+
+6. Open in your browser:
+   http://127.0.0.1:8000/
+
+CUSTOMER ACCOUNT
+----------------
+Use Create account on the website. Then use the SAME Sign in page for both customers and administrators. Enter username OR registered email plus password; customers go to shopping and staff/superusers go to the admin dashboard.
+
+ADMIN
+-----
+Create an admin account from PowerShell:
+
+   python manage.py createsuperuser
+
+There is no separate customer/admin login anymore. Use the single Sign in page. Staff/superusers are automatically sent to the admin dashboard. /admin/ remains available for Django's built-in administration.
+
+GITHUB
+------
+Do not upload venv/ or .env. The included .gitignore excludes them.
+
+   git init
+   git add .
+   git commit -m "Initial professional Curious Cart project"
+   git branch -M main
+   git remote add origin YOUR_GITHUB_REPOSITORY_URL
+   git push -u origin main
+
+NOTES
+-----
+- The payment screens are portfolio/demo flows. UPI QR generation does not verify real transactions.
+- Set DJANGO_SECRET_KEY, DJANGO_DEBUG and DJANGO_ALLOWED_HOSTS in a deployment environment.
+- The project targets Python 3.12 and Django 4.2.
+
+
+PASSWORD RESET
+--------------
+Customer sign-in accepts username OR registered email. Forgot password sends a 6-digit code to the registered email, valid for 10 minutes. Configure EMAIL_HOST_USER and EMAIL_HOST_PASSWORD in your environment before using real email delivery. For Gmail, use a Google App Password.
+
+
+GMAIL PASSWORD RESET SETUP
+--------------------------
+1. Copy .env.example to .env in the same folder as manage.py.
+2. Create a Google App Password for the Gmail account that will send Curious Cart emails. Do NOT use your normal Gmail password.
+3. Put these values in .env:
+   EMAIL_HOST_USER=yourgmail@gmail.com
+   EMAIL_HOST_PASSWORD=your-16-character-app-password
+   DEFAULT_FROM_EMAIL=yourgmail@gmail.com
+4. Save .env and restart the Django server.
+5. The customer account must have that customer's own email saved. Existing old accounts with a blank email must be updated by the administrator once.
+
+If Gmail settings are not configured, the project uses Django's local console email backend so the application itself still starts. Real Gmail delivery requires valid Gmail/App Password settings.

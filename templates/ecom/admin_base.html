@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Curious Cart Admin{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/curious.css' %}">
+</head>
+<body class="admin-body">
+<nav class="admin-nav">
+  <div class="cc-wrap admin-nav-inner">
+    <a class="admin-brand" href="{% url 'admin-dashboard' %}"><span>CURIOUS</span> CART <small>ADMIN</small></a>
+    <div class="admin-links">
+      <a href="{% url 'admin-dashboard' %}">Dashboard</a>
+      <a href="{% url 'admin-products' %}">Products</a>
+      <a href="{% url 'admin-view-booking' %}">Orders</a>
+      <a href="{% url 'view-customer' %}">Customers</a>
+      <a href="{% url 'admin-reviews' %}">Reviews</a>
+      <a href="{% url 'admin-edit-profile' %}">Admin Profile</a>
+      <a href="{% url 'admin-change-password' %}">Change Password</a>
+      <a class="admin-logout" href="{% url 'logout' %}">Logout</a>
+    </div>
+  </div>
+</nav>
+<main class="admin-main">
+  {% block content %}{% endblock %}
+</main>
+<footer class="admin-footer">Curious Cart <span>•</span> Administration</footer>
+</body>
+</html>

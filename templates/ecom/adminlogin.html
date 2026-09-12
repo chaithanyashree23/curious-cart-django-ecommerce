@@ -1,0 +1,19 @@
+{% load static widget_tweaks %}
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin sign in · Curious Cart</title><link rel="stylesheet" href="{% static 'css/curious.css' %}"></head>
+<body class="auth-page">
+<div class="auth-shell">
+  <div class="auth-brand"><a href="/">CURIOUS <span>CART</span></a><small>Administration portal</small></div>
+  <div class="auth-card">
+    <div class="auth-heading"><span class="eyebrow">ADMINISTRATOR</span><h1>Sign in to admin</h1><p>Manage products, customers, orders, reviews and store insights.</p></div>
+    {% if messages %}{% for message in messages %}<div class="notice notice-{{ message.tags }}">{{ message }}</div>{% endfor %}{% endif %}
+    <form method="post" novalidate>{% csrf_token %}
+      <div class="field"><label for="id_username">Username</label><input id="id_username" name="username" type="text" class="form-input" placeholder="Admin username" autocomplete="username" required></div>
+      <div class="field"><label for="id_password">Password</label><input id="id_password" name="password" type="password" class="form-input" placeholder="Password" autocomplete="current-password" required></div>
+      <button class="btn btn-primary auth-submit" type="submit">Sign in</button>
+    </form>
+    <p class="auth-footer"><a href="/">← Back to store</a></p>
+  </div>
+</div>
+</body></html>
