@@ -1,3 +1,85 @@
+# Curious Cart — Django E-Commerce Application
+
+## Project Overview
+
+Curious Cart is a Django-based e-commerce web application that provides a complete online shopping experience with customer authentication, product browsing, cart management, wishlist, reviews, order tracking, payments, and an administrative dashboard.
+
+## Technologies
+
+- Python
+- Django
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- SQLite
+- UPI QR Payment
+
+## Key Features
+
+- Customer registration and login
+- Product search and categories
+- Wishlist management
+- Shopping cart
+- Coupon management
+- Product reviews
+- Order tracking
+- Cash on Delivery
+- UPI QR payment
+- PDF invoice generation
+- Password reset with email verification
+- Admin dashboard for managing products, customers, orders, and feedback
+
+## Screenshots
+
+### Customer Home Page
+
+![Customer Home Page](screenshots/home.png)
+
+### Product Page
+
+![Product Page](screenshots/product.png)
+
+### Wishlist
+
+![Wishlist](screenshots/wishlist.png)
+
+### Shopping Cart
+
+![Shopping Cart](screenshots/cart.png)
+
+### Payment — UPI QR / Cash on Delivery
+
+![Payment](screenshots/payment.png)
+
+### Order Tracking
+
+![Order Tracking](screenshots/order-tracking.png)
+
+### Customer Profile
+
+![Customer Profile](screenshots/profile.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### Product Management
+
+![Product Management](screenshots/admin-products.png)
+
+### Customer Management
+
+![Customer Management](screenshots/admin-customers.png)
+
+### Order Management
+
+![Order Management](screenshots/admin-orders.png)
+
+## How to Run
+
+```bash
+python -m venv venv
 # Curious Cart — Professional Ready
 
 A Django e-commerce portfolio application with a balanced customer/admin theme.
