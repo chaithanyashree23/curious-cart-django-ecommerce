@@ -30,51 +30,51 @@ Curious Cart is a Django-based e-commerce web application that provides a comple
 - Password reset with email verification
 - Admin dashboard for managing products, customers, orders, and feedback
 
-## Screenshots
+# Screenshots
 
 ### Customer Home Page
 
-![Customer Home Page](screenshots/home.png)
+![Customer Home Page](home.png)
 
 ### Product Page
 
-![Product Page](screenshots/product.png)
+![Product Page](product.png)
 
 ### Wishlist
 
-![Wishlist](screenshots/wishlist.png)
+![Wishlist](wishlist.png)
 
 ### Shopping Cart
 
-![Shopping Cart](screenshots/cart.png)
+![Shopping Cart](cart.png)
 
 ### Payment — UPI QR / Cash on Delivery
 
-![Payment](screenshots/payment.png)
+![Payment](payment.png)
 
 ### Order Tracking
 
-![Order Tracking](screenshots/order-tracking.png)
+![Order Tracking](order-tracking.png)
 
 ### Customer Profile
 
-![Customer Profile](screenshots/profile.png)
+![Customer Profile](profile.png)
 
 ### Admin Dashboard
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](ad.png)
 
 ### Product Management
 
-![Product Management](screenshots/admin-products.png)
+![Product Management](admin-products.png)
 
 ### Customer Management
 
-![Customer Management](screenshots/admin-customers.png)
+![Customer Management](admin-customers.png)
 
 ### Order Management
 
-![Order Management](screenshots/admin-orders.png)
+![Order Management](admin-orders.png)
 
 ## How to Run
 
